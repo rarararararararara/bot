@@ -2,12 +2,15 @@ import discord
 import random
 import datetime
 client = discord.Client()
+
 @client.event
 async def on_ready():
     print('Logged in as')
     print(client.user.name)
     print(client.user.id)
     print('------')
+
+
 @client.event
 async def on_message(message):
     if message.author.bot:
@@ -26,4 +29,6 @@ async def on_message(message):
             await message.channel.send('シージ')
         elif game == 4:
             await message.channel.send('LOL')
+
+            
 client.run("NzE4MzM4MDg1MjUwNzkzNTAy.Xt85dA.a_rePmYZFOUwqlA3ONAFNgnsQnA")
